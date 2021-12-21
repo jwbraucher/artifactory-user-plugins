@@ -10,7 +10,7 @@ import org.artifactory.repo.RepoPathFactory
 
 
 executions {
-    deleteByPropertyValue() { params ->
+    deleteByPropertyValue(groups: ['alfred-rw']) { params ->
         propertyName = params?.get('propertyName')?.get(0) as String
         propertyValue = params?.get('propertyValue')?.get(0) as int
         repo = params?.get('repo')?.get(0) as String
